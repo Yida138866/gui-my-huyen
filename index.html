@@ -53,6 +53,14 @@ body{color:#fbeee6;font-family:var(--serif);-webkit-tap-highlight-color:transpar
 .rule{height:1px;margin:22px 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .sign{margin-top:22px;text-align:right;color:var(--gold);font-size:18px;letter-spacing:.08em}
 .replay{margin-top:28px;background:transparent;color:var(--gold);border:1px solid var(--gold-soft);border-radius:9999px;padding:10px 22px;font-family:var(--serif);font-size:14px;cursor:pointer}
+
+.music-btn{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:30;width:46px;height:46px;border-radius:9999px;border:1px solid var(--gold-soft);background:rgba(20,4,8,.82);color:var(--gold);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(0,0,0,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:0;font-family:var(--serif);transition:transform .25s ease,box-shadow .25s ease,opacity .25s ease}
+.music-btn:hover,.music-btn:focus-visible{transform:scale(1.06);box-shadow:0 0 18px rgba(232,194,122,.5);outline:none}
+.music-btn.on{box-shadow:0 0 16px rgba(232,194,122,.45)}
+.music-btn:not(.on){opacity:.75}
+.music-btn .pause-bars{display:none;width:10px;height:13px;border-left:3px solid var(--gold);border-right:3px solid var(--gold)}
+.music-btn.on .note{display:none}
+.music-btn.on .pause-bars{display:block}
 </style>
 </head>
 <body>
@@ -125,6 +133,8 @@ body{color:#fbeee6;font-family:var(--serif);-webkit-tap-highlight-color:transpar
     <button class="replay" id="replayBtn">Xem lại · 再看一次 🌹</button>
   </div>
 </div>
+<audio id="bgm" loop preload="auto" src="music.mp3"></audio>
+<button type="button" class="music-btn" id="musicBtn" aria-label="Play music" aria-pressed="false"><span class="note" aria-hidden="true">♪</span><span class="pause-bars" aria-hidden="true"></span></button>
 <script>
 (function(){
   var LINES=[
@@ -155,7 +165,17 @@ body{color:#fbeee6;font-family:var(--serif);-webkit-tap-highlight-color:transpar
     var ds=dots.children;for(var k=0;k<ds.length;k++){ds[k].className=(k<=line?'on':'')+(k===line?' cur':'');}
     clearTimeout(timer);timer=setTimeout(next,3200);}
   function next(){if(stage!==1)return;if(line<LINES.length-1){line++;render();}else{clearTimeout(timer);show(2);}}
-  document.getElementById('openBtn').addEventListener('click',function(){line=0;show(1);render();});
+
+  var audio=document.getElementById('bgm'),musicBtn=document.getElementById('musicBtn');
+  var musicStarted=false,userPaused=false,fadeTimer=null;
+  audio.volume=0;
+  function setMusicUi(){var on=!audio.paused;musicBtn.classList.toggle('on',on);musicBtn.setAttribute('aria-pressed',on?'true':'false');musicBtn.setAttribute('aria-label',on?'Pause music':'Play music');}
+  function fadeIn(){if(fadeTimer)clearInterval(fadeTimer);var v=audio.volume||0;fadeTimer=setInterval(function(){v=Math.min(0.7,v+0.05);audio.volume=v;if(v>=0.7){clearInterval(fadeTimer);fadeTimer=null;}},70);}
+  function startMusic(){if(userPaused)return;var p=audio.play();if(p&&p.catch)p.catch(function(){});if(!musicStarted){musicStarted=true;audio.volume=0;fadeIn();}setMusicUi();}
+  musicBtn.addEventListener('click',function(e){e.stopPropagation();if(audio.paused){userPaused=false;if(!musicStarted)startMusic();else{var p=audio.play();if(p&&p.catch)p.catch(function(){});}}else{userPaused=true;audio.pause();}setMusicUi();});
+  audio.addEventListener('play',setMusicUi);audio.addEventListener('pause',setMusicUi);
+  document.addEventListener('pointerdown',function(e){if(musicBtn.contains(e.target))return;startMusic();});
+  document.getElementById('openBtn').addEventListener('click',function(){startMusic();line=0;show(1);render();});
   s1.addEventListener('click',next);
   document.getElementById('replayBtn').addEventListener('click',function(){clearTimeout(timer);line=0;show(0);});
 })();
