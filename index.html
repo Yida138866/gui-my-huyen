@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0204">
+<title>Gửi Mỹ Huyền ❤️</title>
+<meta property="og:title" content="Gửi Mỹ Huyền ❤️ · 致 Mỹ Huyền">
+<meta property="og:description" content="Chạm vào bông hồng để mở 🌹 · 轻触玫瑰，打开我的心意">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#e8c27a;--gold-soft:rgba(232,194,122,0.55);--red:#d4223a;--serif:'Noto Serif','Noto Serif SC','Songti SC',Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;min-height:100%}
+body{color:#fbeee6;font-family:var(--serif);-webkit-tap-highlight-color:transparent}
+.wrap{position:relative;min-height:100vh;min-height:100dvh;width:100%;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#2a0710 0%,#0b0204 55%,#000 100%)}
+.backdrop{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.center{position:relative;z-index:1;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:96px 22px;text-align:center}
+.hidden{display:none!important}
+@keyframes mh-float{0%{transform:translateY(0) rotate(0deg);opacity:0}10%{opacity:.9}90%{opacity:.7}100%{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+@keyframes mh-fall{0%{transform:translateY(-10vh) rotate(0deg);opacity:0}10%{opacity:.85}100%{transform:translateY(110vh) rotate(320deg);opacity:0}}
+@keyframes mh-twinkle{0%,100%{opacity:.1;transform:scale(.6)}50%{opacity:1;transform:scale(1.2)}}
+@keyframes mh-pulse{0%,100%{transform:scale(1);filter:drop-shadow(0 0 12px rgba(212,34,58,.6))}50%{transform:scale(1.08);filter:drop-shadow(0 0 28px rgba(232,194,122,.8))}}
+@keyframes mh-in{0%{opacity:0;transform:translateY(18px);filter:blur(6px)}100%{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes mh-ribbon{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}
+@keyframes mh-ribbon-flip{0%,100%{transform:scaleY(-1) translateX(0)}50%{transform:scaleY(-1) translateX(-14px)}}
+@keyframes mh-glow{0%,100%{text-shadow:0 0 10px rgba(232,194,122,.4)}50%{text-shadow:0 0 22px rgba(232,194,122,.9)}}
+@keyframes mh-hint{0%,100%{opacity:.45}50%{opacity:1}}
+.mh-in{animation:mh-in 1.1s cubic-bezier(.2,.7,.2,1) both}
+.title{font-size:15px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.rose-btn{background:none;border:none;cursor:pointer;padding:0;margin-top:34px;animation:mh-pulse 2.4s ease-in-out infinite}
+.hint{margin-top:22px;font-size:16px;color:#fbeee6;animation:mh-hint 2s ease-in-out infinite}
+.zh{font-family:'Noto Serif SC','Songti SC',var(--serif);font-size:26px;line-height:1.5;color:#fff4ec;letter-spacing:.04em;animation:mh-glow 3s ease-in-out infinite}
+.vi{font-size:18px;line-height:1.5;color:var(--gold);font-style:italic;margin-top:10px}
+.dots{display:flex;gap:8px;margin-top:40px}
+.dots span{width:8px;height:8px;border-radius:9999px;background:rgba(255,255,255,.2);transition:all .5s ease}
+.dots span.on{background:var(--red)}
+.dots span.cur{width:22px}
+.cont{margin-top:14px;font-size:12px;color:rgba(251,238,230,.5)}
+.frame{width:100%;max-width:340px;margin-top:22px;padding:6px;border-radius:18px;background:linear-gradient(135deg,var(--gold),#8a1022 50%,var(--gold));box-shadow:0 0 40px rgba(212,34,58,.45);animation-delay:.2s}
+.frame>div{border-radius:13px;overflow:hidden;background:#000;aspect-ratio:9/16}
+.frame img{display:block;width:100%;height:100%;object-fit:cover}
+.letter{width:100%;max-width:560px;margin-top:30px;padding:26px 22px;border-radius:18px;text-align:left;background:rgba(20,4,8,.78);border:1px solid var(--gold-soft);box-shadow:0 10px 40px rgba(0,0,0,.6);animation-delay:.6s}
+.lzh{font-family:'Noto Serif SC','Songti SC',var(--serif);font-size:17px;line-height:1.9;color:#fff4ec}
+.lzh p{margin:0 0 10px;text-indent:2em}
+.lzh p.first{text-indent:0;color:var(--gold)}
+.lvi{font-size:16px;line-height:1.8;color:#f6e2d4;font-style:italic}
+.lvi p{margin:0 0 10px}
+.lvi p.first{color:var(--gold)}
+.love{margin:6px 0 0!important;color:var(--red)!important;font-size:20px;text-align:right;text-indent:0!important;font-style:normal}
+.rule{height:1px;margin:22px 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sign{margin-top:22px;text-align:right;color:var(--gold);font-size:18px;letter-spacing:.08em}
+.replay{margin-top:28px;background:transparent;color:var(--gold);border:1px solid var(--gold-soft);border-radius:9999px;padding:10px 22px;font-family:var(--serif);font-size:14px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="backdrop" id="backdrop">
+    <svg viewBox="0 0 400 120" preserveAspectRatio="none" style="position:absolute;top:0;left:-20px;width:calc(100% + 40px);height:110px;opacity:.8;animation:mh-ribbon 7s ease-in-out infinite">
+      <path d="M0,40 C80,90 140,0 220,45 S340,95 420,30" fill="none" stroke="#d4223a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,52 C90,100 150,12 230,58 S350,105 420,42" fill="none" stroke="#e8c27a" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <svg viewBox="0 0 400 120" preserveAspectRatio="none" style="position:absolute;bottom:0;left:-20px;width:calc(100% + 40px);height:110px;opacity:.8;animation:mh-ribbon-flip 9s ease-in-out infinite">
+      <path d="M0,40 C80,90 140,0 220,45 S340,95 420,30" fill="none" stroke="#d4223a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,52 C90,100 150,12 230,58 S350,105 420,42" fill="none" stroke="#e8c27a" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Stage 0: rose -->
+  <div class="center" id="s0">
+    <div class="title mh-in">Gửi Mỹ Huyền ❤️</div>
+    <div class="title mh-in" lang="zh-Hans" style="margin-top:6px;animation-delay:.2s">致 Mỹ Huyền ❤️</div>
+    <button class="rose-btn" id="openBtn" aria-label="Open">
+      <svg viewBox="0 0 120 160" width="150" height="200" aria-hidden="true">
+        <defs><radialGradient id="mhPetal" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#ff4d63"/><stop offset="70%" stop-color="#c01230"/><stop offset="100%" stop-color="#6e0614"/></radialGradient></defs>
+        <path d="M60,70 C58,100 62,125 60,155" stroke="#2f7a3a" stroke-width="4" fill="none"/>
+        <path d="M60,112 C40,100 30,108 26,118 C40,122 52,120 60,112 Z" fill="#3f9a4c"/>
+        <path d="M61,128 C80,116 92,122 96,132 C82,136 70,134 61,128 Z" fill="#3f9a4c"/>
+        <path d="M60,78 C30,76 22,48 34,30 C44,40 52,38 60,24 C68,38 76,40 86,30 C98,48 90,76 60,78 Z" fill="url(#mhPetal)"/>
+        <path d="M60,66 C44,64 40,48 46,38 C52,44 56,42 60,34 C64,42 68,44 74,38 C80,48 76,64 60,66 Z" fill="#a50d27"/>
+        <path d="M60,54 C52,52 50,44 54,40 C57,43 63,43 66,40 C70,44 68,52 60,54 Z" fill="#7d0819"/>
+        <path d="M34,30 C44,40 52,38 60,24 C68,38 76,40 86,30" fill="none" stroke="rgba(232,194,122,0.55)" stroke-width="0.8"/>
+      </svg>
+    </button>
+    <div class="hint">
+      <div>Chạm vào bông hồng để mở 🌹</div>
+      <div lang="zh-Hans" style="margin-top:4px">轻触玫瑰，打开我的心意</div>
+    </div>
+  </div>
+
+  <!-- Stage 1: lines -->
+  <div class="center hidden" id="s1" style="cursor:pointer">
+    <div id="lineBox" class="mh-in" style="max-width:520px">
+      <div class="zh" lang="zh-Hans" id="lzh"></div>
+      <div class="vi" id="lvi"></div>
+    </div>
+    <div class="dots" id="dots"></div>
+    <div class="cont">Chạm để tiếp tục · 轻触继续</div>
+  </div>
+
+  <!-- Stage 2: photo + letter -->
+  <div class="center hidden" id="s2" style="justify-content:flex-start">
+    <div class="title mh-in" style="text-transform:none">Gửi Mỹ Huyền ❤️</div>
+    <div class="frame mh-in"><div><img src="photo.jpg" alt="Alvin and Mỹ Huyền together with a pink bouquet"></div></div>
+    <div class="letter mh-in">
+      <div class="lzh" lang="zh-Hans">
+        <p class="first">亲爱的 Mỹ Huyền：</p>
+        <p>谢谢你送给我这么用心的惊喜，你写的每一句话我都反复看了好多遍，心里暖暖的。</p>
+        <p>虽然现在我们不能每天在一起，但你一直是我最大的快乐和温暖，你早就是那个给我带来幸福的人了。谢谢你的理解和陪伴，我会好好照顾你、珍惜你，不让你难过。</p>
+        <p>我好想你，期待很快就能见到你，紧紧抱着你。</p>
+        <p class="love">我爱你❤️</p>
+      </div>
+      <div class="rule"></div>
+      <div class="lvi">
+        <p class="first">Mỹ Huyền yêu dấu của anh,</p>
+        <p>Cảm ơn em vì món quà bất ngờ đầy tâm huyết này. Từng lời em viết, anh đã đọc đi đọc lại rất nhiều lần, lòng anh thấy ấm áp vô cùng.</p>
+        <p>Dù bây giờ chúng mình chưa thể ở bên nhau mỗi ngày, nhưng em luôn là niềm vui và sự ấm áp lớn nhất của anh. Em đã là người mang lại hạnh phúc cho anh từ lâu rồi. Cảm ơn em đã luôn thấu hiểu và đồng hành cùng anh. Anh hứa sẽ luôn chăm sóc em, trân trọng em và không để em phải buồn.</p>
+        <p>Anh nhớ em nhiều lắm, mong sớm được gặp em và ôm em thật chặt.</p>
+        <p class="love">Anh yêu em ❤️</p>
+      </div>
+      <div class="sign">— Alvin Liew</div>
+    </div>
+    <button class="replay" id="replayBtn">Xem lại · 再看一次 🌹</button>
+  </div>
+</div>
+<script>
+(function(){
+  var LINES=[
+    {zh:"谢谢你的惊喜，我的宝贝",vi:"Cảm ơn em vì món quà bất ngờ, em yêu"},
+    {zh:"有你在我的生命里，我真的好幸运",vi:"Có em trong cuộc đời, anh thật may mắn biết bao"},
+    {zh:"距离改变不了我的心",vi:"Khoảng cách không thể thay đổi trái tim anh"},
+    {zh:"每一天，我都在想你",vi:"Mỗi ngày, anh đều nhớ em"},
+    {zh:"我爱你❤️",vi:"Anh yêu em ❤️"}
+  ];
+  var GOLD="#e8c27a",RED="#d4223a";
+  var bd=document.getElementById('backdrop');
+  function el(css,txt){var s=document.createElement('span');s.style.cssText=css;if(txt)s.textContent=txt;bd.appendChild(s);}
+  for(var i=0;i<34;i++){var l=(i*29+3)%100,t=(i*41+17)%100,sz=2+(i%3),d=2+((i*3)%4),dl=(i*0.37)%3;
+    el('position:absolute;left:'+l+'%;top:'+t+'%;width:'+sz+'px;height:'+sz+'px;border-radius:9999px;background:'+GOLD+';box-shadow:0 0 8px '+GOLD+';animation:mh-twinkle '+d+'s ease-in-out '+dl.toFixed(2)+'s infinite');}
+  for(i=0;i<16;i++){var hl=(i*37+7)%100,hs=12+((i*7)%16),hd=9+((i*5)%8),hdl=(i*1.3)%10,ch=i%3===0?"♥":i%3===1?"❤":"♡";
+    el('position:absolute;left:'+hl+'%;bottom:-40px;font-size:'+hs+'px;color:'+(i%4===0?GOLD:RED)+';opacity:0;animation:mh-float '+hd+'s linear '+hdl.toFixed(2)+'s infinite',ch);}
+  for(i=0;i<12;i++){var pl=(i*53+11)%100,ps=10+((i*3)%10),pd=11+((i*7)%9),pdl=(i*1.7)%12;
+    el('position:absolute;left:'+pl+'%;top:-30px;width:'+ps+'px;height:'+(ps*0.7)+'px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#ff5a6e,#9e0f22);opacity:0;animation:mh-fall '+pd+'s linear '+pdl.toFixed(2)+'s infinite');}
+
+  var s0=document.getElementById('s0'),s1=document.getElementById('s1'),s2=document.getElementById('s2');
+  var box=document.getElementById('lineBox'),zh=document.getElementById('lzh'),vi=document.getElementById('lvi'),dots=document.getElementById('dots');
+  for(i=0;i<LINES.length;i++)dots.appendChild(document.createElement('span'));
+  var stage=0,line=0,timer=null;
+  function restart(node){node.classList.remove('mh-in');void node.offsetWidth;node.classList.add('mh-in');}
+  function show(n){stage=n;s0.classList.toggle('hidden',n!==0);s1.classList.toggle('hidden',n!==1);s2.classList.toggle('hidden',n!==2);
+    var anims=document.querySelectorAll('#s'+n+' .mh-in');for(var k=0;k<anims.length;k++)restart(anims[k]);window.scrollTo(0,0);}
+  function render(){zh.textContent=LINES[line].zh;vi.textContent=LINES[line].vi;restart(box);
+    var ds=dots.children;for(var k=0;k<ds.length;k++){ds[k].className=(k<=line?'on':'')+(k===line?' cur':'');}
+    clearTimeout(timer);timer=setTimeout(next,3200);}
+  function next(){if(stage!==1)return;if(line<LINES.length-1){line++;render();}else{clearTimeout(timer);show(2);}}
+  document.getElementById('openBtn').addEventListener('click',function(){line=0;show(1);render();});
+  s1.addEventListener('click',next);
+  document.getElementById('replayBtn').addEventListener('click',function(){clearTimeout(timer);line=0;show(0);});
+})();
+</script>
+</body>
+</html>
